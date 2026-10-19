@@ -1,0 +1,46 @@
+# Publica la web en GitHub Pages con los encuentros de Notion.
+# Se ejecuta cada mañana, cada vez que se sube un cambio a la rama main
+# y a mano desde la pestaña Actions → «Publicar web» → «Run workflow».
+name: Publicar web
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # todos los días a las 6:00 UTC (7:00 u 8:00 en Madrid)
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Leer los encuentros de Notion
+        run: node scripts/actualizar-desde-notion.mjs
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
