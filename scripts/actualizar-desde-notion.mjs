@@ -24,6 +24,7 @@ const TEMAS = {
   'Diversidad y Transicion Energetica': ['energia', 'Energía'],
   'Inteligencia Artificial':            ['ia', 'IA'],
   'Agua':                               ['agua', 'Agua'],
+  'Transicion Ecologica':               ['transicion', 'Transición ecológica'],
 };
 
 // Sin token se publica el eventos.json que ya está en el repositorio, sin tocarlo

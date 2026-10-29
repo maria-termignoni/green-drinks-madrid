@@ -1,10 +1,10 @@
 {
-  "generado": "2026-10-18 (versión inicial, antes de la primera actualización desde Notion)",
+  "generado": "2026-10-29 (noviembre pasa a especial CONAMA)",
   "proximo": {
-    "fecha": "2026-11-12", "hora": "20:00", "cat": "agua", "tema": "Agua",
-    "titulo": "", "nombre": "Jesús Mateos Robledo", "cargo": "Presidente de YWP Spain (Young Water Professionals)",
-    "charla": "", "bio": "Presidente de YWP Spain, la red de jóvenes profesionales del agua en España.",
-    "web": "https://ywp-spain.es/", "linkedin": "https://www.linkedin.com/in/jmatrob", "foto": "assets/ponentes/jesus.jpg", "inscripcion": ""
+    "fecha": "2026-11-12", "hora": "20:00", "cat": "transicion", "tema": "Transición ecológica",
+    "titulo": "CONAMA 2026: del dicho al HACER", "nombre": "Invitado especial por confirmar", "cargo": "Viene a contarnos qué es CONAMA 2026 y cómo aprovecharlo",
+    "charla": "A menos de tres semanas de CONAMA 2026, el gran congreso del medio ambiente en España, te contamos qué es, qué debates van a marcar esta edición y cómo aprovecharlo, vayas o no al congreso.", "bio": "",
+    "web": "", "linkedin": "", "foto": "", "inscripcion": "https://forms.gle/mK2DCHH3R8cUciv3A"
   },
   "pasados": [
     {"fecha": "2026-10-15", "hora": "20:00", "cat": "eco", "tema": "Economía y ecología",
